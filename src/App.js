@@ -15,6 +15,7 @@ const GlobalStyle = createGlobalStyle`
     padding:0;
     box-sizing: border-box;
     overflow: hidden;
+    font-family: 'Indie Flower', cursive;
   }
 `;
 
@@ -30,10 +31,8 @@ const MainWrapper = styled.div`
 
 const DropdownWrapper = styled.div`
   position: absolute;
-  top: 100px;
-  right: 0;
-  left: 0;
-  margin: auto 15rem;
+  top: 20%;
+  left: 20%;
 `;
 
 function App() {

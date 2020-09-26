@@ -15,6 +15,7 @@ const Wrapper = styled.div.attrs((props) => ({
   background: none;
   z-index: 99;
   cursor: grab;
+  margin: 1rem;
 `;
 
 const NavIconWrapper = (props) => {

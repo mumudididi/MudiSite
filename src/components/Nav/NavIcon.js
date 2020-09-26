@@ -22,6 +22,9 @@ const StyledButton = styled.button`
     transform: rotate(30deg);
     transition: all 0.4s ease-in-out;
   }
+  font-family: "Indie Flower", cursive;
+  font-size: 1.3rem;
+  font-weight: bold;
 `;
 
 const YellowFolder = styled(Folder)`

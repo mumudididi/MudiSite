@@ -1,12 +1,12 @@
 import React from "react";
-import DropdownContainer from "../DropDown/DropDownContainer";
+import ScrollableDropDownContainer from "../DropDown/ScrollableDropdownContainer";
 
 const About = (props) => {
   return (
-    <DropdownContainer>
+    <ScrollableDropDownContainer>
       {props.currFocus}
       Asjkfsdklfldf
-    </DropdownContainer>
+    </ScrollableDropDownContainer>
   );
 };
 
