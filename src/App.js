@@ -11,7 +11,6 @@ import About from "./components/Pages/About";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    /* background: rgba(50,50,50,0.5); */
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -31,8 +30,10 @@ const MainWrapper = styled.div`
 
 const DropdownWrapper = styled.div`
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 100px;
+  right: 0;
+  left: 0;
+  margin: auto 15rem;
 `;
 
 function App() {
@@ -40,37 +41,26 @@ function App() {
   const [currFocus, setCurrFocus] = useState("HOME");
   const [longPressTarget, setLongPressTarget] = useState();
   const [isDropDownOpen, setDropDownVisibility] = useState(false);
-  const initailDistanceToRight = window.innerWidth;
+  const initailDistanceToLeft = 0;
 
   const [HomeIconProps, setHomeIconProps] = useState({
-    pos: { left: 0.1 * initailDistanceToRight, top: 100 },
-    // pos: { right: initailDistanceToRight, top: 100 },
+    pos: { left: 0.1 * initailDistanceToLeft, top: 100 },
     posOffSet: { diffX: 0, diffY: 0 },
   });
 
   const [AboutIconProps, setAboutIconProps] = useState({
-    // pos: { right: initailDistanceToRight, top: 250 },
-    pos: { left: 0.2 * initailDistanceToRight, top: 250 },
+    pos: { left: 0.2 * initailDistanceToLeft, top: 250 },
     posOffSet: { diffX: 0, diffY: 0 },
   });
   const [ExperienceIconProps, setExperienceIconProps] = useState({
-    // pos: { right: initailDistanceToRight, top: 400 },
-    pos: { left: 0.1 * initailDistanceToRight, top: 400 },
+    pos: { left: 0.1 * initailDistanceToLeft, top: 400 },
     posOffSet: { diffX: 0, diffY: 0 },
   });
   const [ContactIconProps, setContactIconProps] = useState({
-    // pos: { right: initailDistanceToRight, top: 550 },
-    pos: { left: 0.2 * initailDistanceToRight, top: 550 },
+    pos: { left: 0.2 * initailDistanceToLeft, top: 550 },
     posOffSet: { diffX: 0, diffY: 0 },
   });
 
-  // const dropdown = isDropDownOpen ? (
-  //   <DropdownWindow currFocus={currFocus} />
-  // ) : null;
-
-  // const [, updateState] = React.useState();
-  // const forceUpdate = React.useCallback(() => updateState({}), []);
-  //   forceUpdate();
   const dropdown = isDropDownOpen ? (
     <DropdownWrapper>
       <Switch>
