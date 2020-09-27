@@ -81,12 +81,28 @@ const DropdownContainer = styled.div.attrs((props) => ({
 `;
 
 const ScrollableDropdownContainer = (props) => {
+  const {
+    setLongPressTarget,
+    handleClose,
+    handleMouseUp,
+    handleMouseDown,
+    pos,
+    posOffSet,
+  } = props;
+
+  console.log(pos);
   return (
     <DropdownContainer style={props.style}>
-      <TitleContainer>
+      <TitleContainer
+        onMouseDown={(e) => {
+          handleMouseDown(e, pos, posOffSet);
+          setLongPressTarget("TitleContainer");
+        }}
+        onMouseUp={() => handleMouseUp(pos, posOffSet)}
+      >
         <TitleButton
           style={{ background: "red", left: "1rem" }}
-          onClick={props.handleClose}
+          onClick={handleClose}
         />
       </TitleContainer>
       <ScrollContentContainer>{props.children}</ScrollContentContainer>

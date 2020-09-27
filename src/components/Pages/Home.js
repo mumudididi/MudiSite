@@ -7,7 +7,7 @@ const Home = (props) => {
   return (
     <ScrollableDropdownContainer
       style={{ color: "white", height: "50vh", width: "50vw" }}
-      handleClose={props.handleClose}
+      {...props}
     >
       <HeadLine>
         <p

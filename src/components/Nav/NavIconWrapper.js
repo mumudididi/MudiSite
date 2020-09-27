@@ -33,8 +33,8 @@ const NavIconWrapper = (props) => {
   const handleMouseUp = () => {
     setLongPressTarget();
     setProps({
-      posOffSet,
-      pos: { diffX: 0, diffY: 0 },
+      posOffSet: { diffX: 0, diffY: 0 },
+      pos,
     });
   };
 

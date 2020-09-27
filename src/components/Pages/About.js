@@ -5,15 +5,15 @@ import ContentContainer from "../Pages/sharedComponent/ContentContainer";
 const About = (props) => {
   return (
     <ScrollableDropDownContainer
-      style={{ color: "white", height: "65vh", width: "60vw" }}
-      handleClose={props.handleClose}
+      style={{ color: "white", height: "75vh", width: "70vw" }}
+      {...props}
     >
       <HeadLine>
-        <p style={{ fontSize: "2.3rem" }}>
+        <p style={{ fontSize: "2.5rem" }}>
           A little bit more about{" "}
           <span
             style={{
-              fontSize: "2.5rem",
+              fontSize: "2.7rem",
               color: "#ffd500",
               textShadow: "4px 4px 4px #ccc",
               fontWeight: "bold",
