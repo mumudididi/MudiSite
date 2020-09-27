@@ -37,7 +37,16 @@ const DropdownWrapper = styled.div.attrs((props) => ({
 }))`
   position: absolute;
 `;
-
+const CopyRight = styled.div`
+  position: absolute;
+  color: gold;
+  background: none;
+  bottom: 2%;
+  left: 40%;
+  text-align: center;
+  font-size: 1.5rem;
+  white-space: nowrap;
+`;
 function App() {
   const sections = ["HOME", "ABOUT", "EXPERIENCE", "CONTACT"];
   const [currFocus, setCurrFocus] = useState("HOME");
@@ -46,7 +55,7 @@ function App() {
   const windowWidth = window.innerWidth;
 
   const [DropdownProps, setDropdownProps] = useState({
-    pos: { left: 0.1 * windowWidth, top: 100 },
+    pos: { left: 0.15 * windowWidth, top: 100 },
     posOffSet: { diffX: 0, diffY: 0 },
   });
   const [HomeIconProps, setHomeIconProps] = useState({
@@ -212,6 +221,9 @@ function App() {
           </Link>
         ))}
         {dropdown}
+        <CopyRight>
+          <p>made by Chuanmudi Qin ٩(◦`꒳´◦)۶ &#169; 2020</p>
+        </CopyRight>
       </MainWrapper>
     </div>
   );

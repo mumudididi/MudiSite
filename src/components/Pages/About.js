@@ -45,7 +45,7 @@ const About = (props) => {
           and, I am currently pursuing an Applied Math degree at{" "}
           <span style={{ color: "#ffd500" }}>
             {" "}
-            University of Washing -Seattle
+            University of Washington -Seattle
           </span>
         </p>
         <p style={{ fontWeight: "bold", textShadow: "2px 2px 2px #ccc" }}>
@@ -61,10 +61,12 @@ const About = (props) => {
           <span style={{ color: "#ffd500" }}>
             Java, Python, SQL, Javascript, Shell, Html, CSS, Latex...
           </span>{" "}
-          I do my daily work on a Linux machine( which is my only laptop right
-          now, I hope I can afford a Mac pro in the future.) and Arch is my
-          favorite distro. Familiar with Software development process.
-          Specialized in Data analytics and visualization.
+          I do my daily work on a Linux machine{" "}
+          <span style={{ color: "red" }}>( </span> which is my only laptop right
+          now, I hope I can afford a Mac pro in the future{" "}
+          <span style={{ color: "red" }}>) </span>. and Arch is my favorite
+          distro. Familiar with Software development process. Specialized in
+          Data analytics and visualization.
         </p>
         <p
           style={{

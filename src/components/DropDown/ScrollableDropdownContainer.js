@@ -10,6 +10,7 @@ const TitleContainer = styled.div`
   flex-direction: row;
   position: relative;
   align-items: center;
+  cursor: grab;
 `;
 
 const TitleButton = styled.button`
