@@ -10,7 +10,7 @@ const Wrapper = styled.div.attrs((props) => ({
   },
 }))`
   position: absolute;
-  height: 70px;
+  height: 85px;
   width: 100px;
   background: none;
   z-index: 99;
