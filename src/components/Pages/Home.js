@@ -6,37 +6,40 @@ import ContentContainer from "./sharedComponent/ContentContainer";
 const Home = (props) => {
   return (
     <ScrollableDropdownContainer
-      style={{ color: "white", height: "50vh", width: "45vw" }}
+      style={{ color: "white", height: "50vh", width: "50vw" }}
+      handleClose={props.handlClose}
     >
       <HeadLine>
         <p
-          style={{ fontSize: "2rem", color: "#d8ebe8", fontWeight: "lighter" }}
+          style={{
+            fontSize: "2rem",
+            color: "rgba(227, 214, 138, 0.5)",
+            fontWeight: "lighter",
+          }}
         >
           (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧{" "}
           <span
             style={{
-              fontSize: "6rem",
+              fontSize: "3rem",
               color: "#ffd500",
-              fontFamily: "Tangerine",
+              //   fontFamily: "k",
               textShadow: "4px 4px 4px #ccc",
               fontWeight: "bold",
             }}
           >
-            Mudi
+            Chuanmudi Qin
           </span>{" "}
           ✧ﾟ･: *ヽ(◕ヮ◕ヽ)
         </p>
       </HeadLine>
-      <ContentContainer style={{ fontSize: "2rem" }}>
-        Hello visitors! You have reached{" "}
-        <span style={{ color: "#ffd500" }}>Mudi</span>
-        's website. abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
-        abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz
-        abcdefghijklmnopqrstuvwxyz
-        abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-        abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-        abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
-        abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+      <ContentContainer style={{ fontSize: "1.8rem" }}>
+        Hello visitors! You just hit{" "}
+        <span style={{ color: "#ffd500" }}>Mudi </span>
+        's website ~ヾ(＾∇＾). <br /> This site is still under development -in
+        the mean time, feel free to mess around with everything here on the
+        page! ~(˘▾˘~)
+        <br /> ཥ•̫͡•ཤ <br />{" "}
+        <p style={{ fontSize: "1rem" }}> Sat, Sep 26 2020 </p>
       </ContentContainer>
     </ScrollableDropdownContainer>
   );

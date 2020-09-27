@@ -60,17 +60,22 @@ function App() {
     posOffSet: { diffX: 0, diffY: 0 },
   });
 
+  const handleClose = () => {
+    setDropDownVisibility(false);
+    setCurrFocus();
+  };
+
   const dropdown = isDropDownOpen ? (
     <DropdownWrapper>
       <Switch>
         <Route exact path="/">
-          <Home currFocus={currFocus} />
+          <Home currFocus={currFocus} handleClose={handleClose} />
         </Route>
         <Route exact path="/HOME">
-          <Home currFocus={currFocus} />
+          <Home currFocus={currFocus} handleClose={handleClose} />
         </Route>
         <Route exact path="/ABOUT">
-          <About currFocus={currFocus} />
+          <About currFocus={currFocus} handleClose={handleClose} />
         </Route>
       </Switch>
     </DropdownWrapper>

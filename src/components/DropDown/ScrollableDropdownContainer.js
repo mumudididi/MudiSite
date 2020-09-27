@@ -3,17 +3,31 @@ import styled from "styled-components";
 
 const TitleContainer = styled.div`
   height: 10%;
+  min-height: 30px;
   width: 100%;
+  border-bottom: 1px white solid;
+  display: inline-flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+`;
+
+const TitleButton = styled.button`
   border: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
 `;
 const ScrollContentContainer = styled.div`
   height: 90%;
   width: 100%;
-  /* position:absolute; */
   bottom: 0;
   border: none;
   overflow: scroll;
   scrollbar-color: #72ccdb #e0728f;
+  scrollbar-width: thin;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,11 +66,10 @@ const ScrollContentContainer = styled.div`
   }
 `;
 
-const DropdownContainer = styled.div`
-  padding-left: 1rem;
+const DropdownContainer = styled.div.attrs((props) => ({
+  style: props.style,
+}))`
   position: relative;
-  height: 60vh;
-  width: 55vw;
   border: 4px #e094a8 solid;
   background-color: rgba(0, 0, 30, 0.9);
   border-radius: 2rem;
@@ -69,8 +82,13 @@ const DropdownContainer = styled.div`
 
 const ScrollableDropdownContainer = (props) => {
   return (
-    <DropdownContainer>
-      <TitleContainer />
+    <DropdownContainer style={props.style}>
+      <TitleContainer>
+        <TitleButton
+          style={{ background: "red", left: "1rem" }}
+          onClick={props.handleClose}
+        />
+      </TitleContainer>
       <ScrollContentContainer>{props.children}</ScrollContentContainer>
     </DropdownContainer>
   );
