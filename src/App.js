@@ -1,3 +1,4 @@
+//TODO: clean up handleMouseDown/Up functions
 import React, { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import NavIcon from "./components/Nav/NavIcon";
@@ -39,7 +40,7 @@ const DropdownWrapper = styled.div.attrs((props) => ({
 `;
 const CopyRight = styled.div`
   position: absolute;
-  color: gold;
+  color: #adff2f;
   background: none;
   bottom: 2%;
   left: 40%;
