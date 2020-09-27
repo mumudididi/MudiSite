@@ -1,5 +1,5 @@
 //TODO: clean up handleMouseDown/Up functions
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import NavIcon from "./components/Nav/NavIcon";
 import NavIconWrapper from "./components/Nav/NavIconWrapper";
@@ -49,8 +49,8 @@ const CopyRight = styled.div`
   white-space: nowrap;
 `;
 function App() {
-  const sections = ["HOME", "ABOUT", "EXPERIENCE", "CONTACT"];
-  const [currFocus, setCurrFocus] = useState("HOME");
+  const sections = ["home", "about", "experience", "contact"];
+  const [currFocus, setCurrFocus] = useState("home");
   const [longPressTarget, setLongPressTarget] = useState();
   const [isDropDownOpen, setDropDownVisibility] = useState(false);
   const windowWidth = window.innerWidth;
@@ -105,19 +105,19 @@ function App() {
     let callback, iconProps;
     if (longPressTarget) {
       switch (longPressTarget) {
-        case "HOME":
+        case "home":
           callback = setHomeIconProps;
           iconProps = HomeIconProps;
           break;
-        case "ABOUT":
+        case "about":
           callback = setAboutIconProps;
           iconProps = AboutIconProps;
           break;
-        case "EXPERIENCE":
+        case "experience":
           callback = setExperienceIconProps;
           iconProps = ExperienceIconProps;
           break;
-        case "CONTACT":
+        case "contact":
           callback = setContactIconProps;
           iconProps = ContactIconProps;
           break;
@@ -136,6 +136,23 @@ function App() {
       });
     }
   };
+
+  useEffect(() => {
+    const handleEsc = (event) => {
+      if (event.keyCode === 27) {
+        console.log("Close");
+        setLongPressTarget();
+        setCurrFocus();
+        setDropDownVisibility(false);
+      }
+    };
+    window.addEventListener("keydown", handleEsc);
+
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, []);
+
   const dropdown = isDropDownOpen ? (
     <DropdownWrapper {...DropdownProps}>
       <Switch>
@@ -151,7 +168,7 @@ function App() {
             setLongPressTarget={setLongPressTarget}
           />
         </Route>
-        <Route exact path="/HOME">
+        <Route exact path="/home">
           <Home
             currFocus={currFocus}
             handleClose={handleClose}
@@ -164,7 +181,7 @@ function App() {
           />
           {/* <Home currFocus={currFocus} handleClose={handleClose} /> */}
         </Route>
-        <Route exact path="/ABOUT">
+        <Route exact path="/about">
           <About
             currFocus={currFocus}
             handleClose={handleClose}
