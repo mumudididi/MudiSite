@@ -200,9 +200,11 @@ function App() {
           <Link to={`/${section}`} key={index}>
             <NavIconWrapper
               setProps={setIconProps[index]}
-              {...iconProps[index]}
+              Props={iconProps[index]}
               longPressTarget={longPressTarget}
               setLongPressTarget={setLongPressTarget}
+              handleMouseDown={handleMouseDown}
+              handleMouseUp={handleMouseUp}
             >
               <NavIcon
                 sectionName={section}

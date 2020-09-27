@@ -19,27 +19,13 @@ const Wrapper = styled.div.attrs((props) => ({
 `;
 
 const NavIconWrapper = (props) => {
-  const { setLongPressTarget, setProps, pos, children } = props;
-  const handleMouseDown = (e) => {
-    e.preventDefault();
-    let dX = e.pageX - e.currentTarget.getBoundingClientRect().left;
-    let dY = e.pageY - e.currentTarget.getBoundingClientRect().top;
-    setProps({
-      pos,
-      posOffSet: { diffX: dX, diffY: dY },
-    });
-  };
-
-  const handleMouseUp = () => {
-    setLongPressTarget();
-    setProps({
-      posOffSet: { diffX: 0, diffY: 0 },
-      pos,
-    });
-  };
-
+  const { handleMouseDown, handleMouseUp, setProps, Props, children } = props;
   return (
-    <Wrapper onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} {...pos}>
+    <Wrapper
+      onMouseDown={(e) => handleMouseDown(e, setProps, Props)}
+      onMouseUp={() => handleMouseUp(setProps, Props)}
+      {...Props.pos}
+    >
       {children}
     </Wrapper>
   );
