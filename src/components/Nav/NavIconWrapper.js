@@ -19,7 +19,7 @@ const Wrapper = styled.div.attrs((props) => ({
 `;
 
 const NavIconWrapper = (props) => {
-  const { setLongPressTarget, setProps, posOffSet, pos, children } = props;
+  const { setLongPressTarget, setProps, pos, children } = props;
   const handleMouseDown = (e) => {
     e.preventDefault();
     let dX = e.pageX - e.currentTarget.getBoundingClientRect().left;

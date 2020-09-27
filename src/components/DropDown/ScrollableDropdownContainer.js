@@ -87,19 +87,17 @@ const ScrollableDropdownContainer = (props) => {
     handleClose,
     handleMouseUp,
     handleMouseDown,
-    pos,
-    posOffSet,
+    Props,
   } = props;
 
-  console.log(pos);
   return (
     <DropdownContainer style={props.style}>
       <TitleContainer
         onMouseDown={(e) => {
-          handleMouseDown(e, pos, posOffSet);
+          handleMouseDown(e, Props);
           setLongPressTarget("TitleContainer");
         }}
-        onMouseUp={() => handleMouseUp(pos, posOffSet)}
+        onMouseUp={() => handleMouseUp(Props)}
       >
         <TitleButton
           style={{ background: "red", left: "1rem" }}

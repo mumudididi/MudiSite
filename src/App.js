@@ -77,7 +77,8 @@ function App() {
     posOffSet: { diffX: 0, diffY: 0 },
   });
 
-  const handleMouseDown = (e, setProps, pos, posOffSet) => {
+  const handleMouseDown = (e, setProps, Props) => {
+    const { pos } = Props;
     e.preventDefault();
     let dX = e.pageX - e.currentTarget.getBoundingClientRect().left;
     let dY = e.pageY - e.currentTarget.getBoundingClientRect().top;
@@ -87,7 +88,8 @@ function App() {
     });
   };
 
-  const handleMouseUp = (setProps, pos, posOffSet) => {
+  const handleMouseUp = (setProps, Props) => {
+    const { pos } = Props;
     setLongPressTarget();
     setProps({
       pos,
@@ -141,13 +143,11 @@ function App() {
           <Home
             currFocus={currFocus}
             handleClose={handleClose}
-            handleMouseDown={(e, pos, posOffSet) =>
-              handleMouseDown(e, setDropdownProps, pos, posOffSet)
+            handleMouseDown={(e, Props) =>
+              handleMouseDown(e, setDropdownProps, Props)
             }
-            handleMouseUp={(pos, posOffSet) =>
-              handleMouseUp(setDropdownProps, pos, posOffSet)
-            }
-            {...DropdownProps}
+            handleMouseUp={(Props) => handleMouseUp(setDropdownProps, Props)}
+            Props={DropdownProps}
             setLongPressTarget={setLongPressTarget}
           />
         </Route>
@@ -155,13 +155,11 @@ function App() {
           <Home
             currFocus={currFocus}
             handleClose={handleClose}
-            handleMouseDown={(e, pos, posOffSet) =>
-              handleMouseDown(e, setDropdownProps, pos, posOffSet)
+            handleMouseDown={(e, Props) =>
+              handleMouseDown(e, setDropdownProps, Props)
             }
-            handleMouseUp={(pos, posOffSet) =>
-              handleMouseUp(setDropdownProps, pos, posOffSet)
-            }
-            {...DropdownProps}
+            handleMouseUp={(Props) => handleMouseUp(setDropdownProps, Props)}
+            Props={DropdownProps}
             setLongPressTarget={setLongPressTarget}
           />
           {/* <Home currFocus={currFocus} handleClose={handleClose} /> */}
@@ -170,13 +168,11 @@ function App() {
           <About
             currFocus={currFocus}
             handleClose={handleClose}
-            handleMouseDown={(e, pos, posOffSet) =>
-              handleMouseDown(e, setDropdownProps, pos, posOffSet)
+            handleMouseDown={(e, Props) =>
+              handleMouseDown(e, setDropdownProps, Props)
             }
-            handleMouseUp={(pos, posOffSet) =>
-              handleMouseUp(setDropdownProps, pos, posOffSet)
-            }
-            {...DropdownProps}
+            handleMouseUp={(Props) => handleMouseUp(setDropdownProps, Props)}
+            Props={DropdownProps}
             setLongPressTarget={setLongPressTarget}
           />
         </Route>
