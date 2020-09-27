@@ -36,8 +36,8 @@ const Home = (props) => {
         Hello visitors! You just hit{" "}
         <span style={{ color: "#ffd500" }}>Mudi </span>
         's website ~ヾ(＾∇＾). <br /> This site is still under development -in
-        the mean time, feel free to mess around with everything here on the
-        page! ~(˘▾˘~)
+        the meantime, feel free to mess around with everything here on the page!
+        ~(˘▾˘~)
         <br /> ཥ•̫͡•ཤ <br />{" "}
         <p style={{ fontSize: "1rem" }}> Sat, Sep 26 2020 </p>
       </ContentContainer>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 const ContentContainer = styled.div`
   background: none;
   border: none;
-  margin: 1rem;
+  margin: 0.5rem;
   overflow-wrap: normal;
 `;
 
