@@ -29,7 +29,16 @@ const About = (props) => {
           I am a <span style={{ color: "#ffd500" }}>Math</span> major by
           profession, and a{" "}
           <span style={{ color: "#ffd500" }}>software developer</span> at heart
-          ♥. <br />I received my undergrad degree in Mathematics from{" "}
+          ♥.
+        </p>
+        <p style={{ fontWeight: "bold", textShadow: "2px 2px 2px #ccc" }}>
+          Background
+          <span style={{ fontWeight: "normal", textShadow: "none" }}>
+            ヾ(๑╹ヮ╹๑)ﾉ”{" "}
+          </span>
+        </p>
+        <p>
+          I received my undergrad degree in Mathematics from{" "}
           <span style={{ color: "#ffd500" }}>
             University of Maryland -College Park
           </span>{" "}
@@ -38,10 +47,8 @@ const About = (props) => {
             {" "}
             University of Washing -Seattle
           </span>
-          .
-          <br />
-          Fun fact about me --I love cooking but I hate doing dishes
         </p>
+        Fun fact about me --I love cooking but I hate doing dishes
       </ContentContainer>
     </ScrollableDropDownContainer>
   );

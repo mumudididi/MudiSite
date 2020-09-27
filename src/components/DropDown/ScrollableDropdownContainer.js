@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const TitleContainer = styled.div`
-  height: 10%;
+  height: 6%;
   min-height: 30px;
   width: 100%;
   border-bottom: 1px white solid;
@@ -21,7 +21,7 @@ const TitleButton = styled.button`
   cursor: pointer;
 `;
 const ScrollContentContainer = styled.div`
-  height: 90%;
+  height: 94%;
   width: 100%;
   bottom: 0;
   border: none;
