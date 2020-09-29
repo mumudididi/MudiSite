@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
     padding:0;
     box-sizing: border-box;
     overflow: hidden;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Kalam', cursive;
   }
 `;
 
@@ -54,26 +54,27 @@ function App() {
   const [longPressTarget, setLongPressTarget] = useState();
   const [isDropDownOpen, setDropDownVisibility] = useState(false);
   const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
 
   const [DropdownProps, setDropdownProps] = useState({
-    pos: { left: 0.15 * windowWidth, top: 100 },
+    pos: { left: 0.15 * windowWidth, top: (1 * windowHeight) / 9 },
     posOffSet: { diffX: 0, diffY: 0 },
   });
   const [HomeIconProps, setHomeIconProps] = useState({
-    pos: { left: 0 * windowWidth, top: 100 },
+    pos: { left: 0 * windowWidth, top: (1 * windowHeight) / 9 },
     posOffSet: { diffX: 0, diffY: 0 },
   });
 
   const [AboutIconProps, setAboutIconProps] = useState({
-    pos: { left: 0 * windowWidth, top: 250 },
+    pos: { left: 0 * windowWidth, top: (3 * windowHeight) / 9 },
     posOffSet: { diffX: 0, diffY: 0 },
   });
   const [ExperienceIconProps, setExperienceIconProps] = useState({
-    pos: { left: 0 * windowWidth, top: 400 },
+    pos: { left: 0 * windowWidth, top: (5 * windowHeight) / 9 },
     posOffSet: { diffX: 0, diffY: 0 },
   });
   const [ContactIconProps, setContactIconProps] = useState({
-    pos: { left: 0 * windowWidth, top: 550 },
+    pos: { left: 0 * windowWidth, top: (7 * windowHeight) / 9 },
     posOffSet: { diffX: 0, diffY: 0 },
   });
 

@@ -5,6 +5,7 @@ const HeadLine = styled.div`
   border: none;
   height: 8rem;
   white-space: nowrap;
+  /* overflow-x: scroll; */
 `;
 
 export default HeadLine;

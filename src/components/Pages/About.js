@@ -3,9 +3,11 @@ import ScrollableDropDownContainer from "../DropDown/ScrollableDropdownContainer
 import HeadLine from "../Pages/sharedComponent/HeadLine";
 import ContentContainer from "../Pages/sharedComponent/ContentContainer";
 const About = (props) => {
+  const h = window.innerHeight * 0.7;
+  const w = window.innerWidth * 0.6;
   return (
     <ScrollableDropDownContainer
-      style={{ color: "white", height: "75vh", width: "70vw" }}
+      style={{ color: "white", height: `${h}px`, width: `${w}px` }}
       {...props}
     >
       <HeadLine>
@@ -15,7 +17,7 @@ const About = (props) => {
             style={{
               fontSize: "2.7rem",
               color: "#ffd500",
-              textShadow: "4px 4px 4px #ccc",
+              textShadow: "2px 2px 2px #ccc",
               fontWeight: "bold",
             }}
           >
@@ -64,9 +66,8 @@ const About = (props) => {
           I do my daily work on a Linux machine{" "}
           <span style={{ color: "red" }}>( </span> which is my only laptop right
           now, I hope I can afford a Mac pro in the future{" "}
-          <span style={{ color: "red" }}>) </span>. and Arch is my favorite
-          distro. Familiar with Software development process. Specialized in
-          Data analytics and visualization.
+          <span style={{ color: "red" }}>) </span>. Familiar with Software
+          development process. Specialized in Data analytics and visualization.
         </p>
         <p
           style={{
@@ -98,17 +99,17 @@ const About = (props) => {
         <p style={{ fontWeight: "bold", textShadow: "2px 2px 2px #ccc" }}>
           <span style={{ fontWeight: "normal", textShadow: "none" }}>
             {" "}
-            •̫͡•ʔʕ•̫͡•ʕ•̫͡•ʔ{" "}
+            ◟ʕ´∀`ʔ◞{" "}
           </span>
           Some fun facts and random stuff
           <span style={{ fontWeight: "normal", textShadow: "none" }}>
             {" "}
-            ◟ʕ´∀`ʔ◞◟ʕ´∀`ʔ ◞
+            ◟ʕ´∀`ʔ ◞
           </span>
         </p>
         <p>
-          I am big CAT lover and I do well with all cats (=ↀωↀ=)✧. <br />
-          And I love cooking but hate doing dishes =͟͟͞͞(꒪ᗜ꒪ ‧̣̥̇) <br />
+          I am a big CAT lover and I do well with all cats. <br />
+          And I love cooking but hate doing dishes. <br />
           And as you can tell, I am MARRIED WITH emoticons Ｏ(≧▽≦)Ｏ
         </p>
       </ContentContainer>

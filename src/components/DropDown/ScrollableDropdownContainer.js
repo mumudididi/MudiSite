@@ -28,7 +28,7 @@ const ScrollContentContainer = styled.div`
   border: none;
   overflow: scroll;
   scrollbar-color: #72ccdb #e0728f;
-  scrollbar-width: auto;
+  scrollbar-width: thin;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,8 +73,9 @@ const DropdownContainer = styled.div.attrs((props) => ({
   position: relative;
   border: 4px #e094a8 solid;
   background-color: rgba(0, 0, 30, 0.9);
-  border-radius: 2rem;
-  display: inline-block;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 
   color: white;

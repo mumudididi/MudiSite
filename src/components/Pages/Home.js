@@ -4,9 +4,11 @@ import HeadLine from "./sharedComponent/HeadLine";
 import ContentContainer from "./sharedComponent/ContentContainer";
 
 const Home = (props) => {
+  const h = window.innerHeight * 0.5;
+  const w = window.innerWidth * 0.5;
   return (
     <ScrollableDropdownContainer
-      style={{ color: "white", height: "50vh", width: "50vw" }}
+      style={{ color: "white", height: `${h}px`, width: `${w}px` }}
       {...props}
     >
       <HeadLine>
@@ -22,8 +24,7 @@ const Home = (props) => {
             style={{
               fontSize: "3rem",
               color: "#ffd500",
-              //   fontFamily: "k",
-              textShadow: "4px 4px 4px #ccc",
+              textShadow: "1px 1px 4px #ccc",
               fontWeight: "bold",
             }}
           >
@@ -35,9 +36,10 @@ const Home = (props) => {
       <ContentContainer style={{ fontSize: "1.8rem" }}>
         Hello visitors! You just hit{" "}
         <span style={{ color: "#ffd500" }}>Mudi </span>
-        's website ~ヾ(＾∇＾). <br /> This site is still under development -in
-        the meantime, feel free to mess around with everything here on the page!
-        ~(˘▾˘~)
+        's website ~ヾ(＾∇＾). <br />
+        I am a graduate student@UW and incoming SDE@Amazon. <br /> This site is
+        still under development -in the meantime, feel free to mess around with
+        everything here on the page! ~(˘▾˘~)
         <br /> ཥ•̫͡•ཤ <br />{" "}
         <p style={{ fontSize: "1rem" }}> Sat, Sep 26 2020 </p>
       </ContentContainer>
