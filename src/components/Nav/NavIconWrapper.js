@@ -23,7 +23,9 @@ const NavIconWrapper = (props) => {
   return (
     <Wrapper
       onMouseDown={(e) => handleMouseDown(e, setProps, Props)}
+      onTouchStart={(e) => handleMouseDown(e, setProps, Props)}
       onMouseUp={() => handleMouseUp(setProps, Props)}
+      onTouchEnd={() => handleMouseUp(setProps, Props)}
       {...Props.pos}
     >
       {children}

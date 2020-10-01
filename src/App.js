@@ -96,8 +96,15 @@ function App() {
   const handleMouseDown = (e, setProps, Props) => {
     const { pos } = Props;
     e.preventDefault();
-    let dX = e.pageX - e.currentTarget.getBoundingClientRect().left;
-    let dY = e.pageY - e.currentTarget.getBoundingClientRect().top;
+    console.log(e.type);
+    let dX, dY;
+    if (e.type === "touchstart") {
+      dX = e.touches[0].pageX - e.currentTarget.getBoundingClientRect().left;
+      dY = e.touches[0].pageY - e.currentTarget.getBoundingClientRect().top;
+    } else {
+      dX = e.pageX - e.currentTarget.getBoundingClientRect().left;
+      dY = e.pageY - e.currentTarget.getBoundingClientRect().top;
+    }
     setProps({
       pos,
       posOffSet: { diffX: dX, diffY: dY },
@@ -143,9 +150,15 @@ function App() {
           break;
         default:
       }
-      let t = e.pageY - iconProps.posOffSet.diffY;
-      // let r = window.innerWidth - e.pageX - iconProps.posOffSet.diffX;
-      let l = e.pageX - iconProps.posOffSet.diffX;
+      let t, l;
+      if (e.type === "mousemove") {
+        t = e.pageY - iconProps.posOffSet.diffY;
+        // let r = window.innerWidth - e.pageX - iconProps.posOffSet.diffX;
+        l = e.pageX - iconProps.posOffSet.diffX;
+      } else {
+        t = e.touches[0].pageY - iconProps.posOffSet.diffY;
+        l = e.touches[0].pageX - iconProps.posOffSet.diffX;
+      }
       callback({
         ...iconProps,
         pos: { left: l, top: t },
@@ -228,7 +241,11 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <MainWrapper onMouseMove={handleMouseMove}>
+      <MainWrapper
+        onMouseMove={handleMouseMove}
+        onTouchMove={handleMouseMove}
+        // onTouchEnd={handleMouseUp}
+      >
         {sections.map((section, index) => (
           <Link to={`/${section}`} key={index}>
             <NavIconWrapper
