@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const TitleContainer = styled.div`
   height: 5%;
-  min-height: 1.1rem;
+  min-height: 2rem;
   width: 100%;
   border-bottom: 1px white solid;
   display: inline-flex;

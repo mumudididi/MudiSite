@@ -9,6 +9,7 @@ import BGImg from "./data/image/bg3.jpg";
 import { Link, Switch, Route } from "react-router-dom";
 import Home from "./components/Pages/Home";
 import About from "./components/Pages/About";
+import Experience from "./components/Pages/Experience";
 
 const GlobalStyle = createGlobalStyle`
 html {
@@ -28,15 +29,23 @@ font-size: 14px;
     box-sizing: border-box;
     overflow: hidden;
     font-family: 'Kalam', cursive;
-  }
-`;
-
-const MainWrapper = styled.div`
+    /* position:fixed; */
   background-image: url(${BGImg});
+  background-position: center;
+  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  }
+`;
+
+const MainWrapper = styled.div`
+  /* background-image: url(${BGImg});
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
   width: 100vw;
   height: 100vh;
   /* font-size: 50px; */
@@ -54,7 +63,7 @@ const CopyRight = styled.div`
   position: absolute;
   color: #adff2f;
   background: none;
-  bottom: 2%;
+  bottom: 0;
   left: 30%;
   text-align: center;
   font-size: 1rem;
@@ -72,7 +81,7 @@ function App() {
   const columnInterval = windowWidth <= 768 ? 0 : windowHeight / 9;
 
   const [DropdownProps, setDropdownProps] = useState({
-    pos: { left: 0.2 * windowWidth, top: (1.5 * windowHeight) / 9 },
+    pos: { left: 0.15 * windowWidth, top: (1.5 * windowHeight) / 9 },
     posOffSet: { diffX: 0, diffY: 0 },
   });
   const [HomeIconProps, setHomeIconProps] = useState({
@@ -212,6 +221,18 @@ function App() {
         </Route>
         <Route exact path="/about">
           <About
+            currFocus={currFocus}
+            handleClose={handleClose}
+            handleMouseDown={(e, Props) =>
+              handleMouseDown(e, setDropdownProps, Props)
+            }
+            handleMouseUp={(Props) => handleMouseUp(setDropdownProps, Props)}
+            Props={DropdownProps}
+            setLongPressTarget={setLongPressTarget}
+          />
+        </Route>
+        <Route exact path="/experience">
+          <Experience
             currFocus={currFocus}
             handleClose={handleClose}
             handleMouseDown={(e, Props) =>

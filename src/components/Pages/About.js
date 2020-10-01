@@ -5,8 +5,8 @@ import ContentContainer from "../Pages/sharedComponent/ContentContainer";
 const About = (props) => {
   const windowHeight = window.innerHeight;
   const windowWidth = window.innerWidth;
-  const h = windowWidth >= 768 ? windowHeight * 0.7 : windowHeight * 0.75;
-  const w = windowWidth >= 768 ? windowWidth * 0.6 : windowWidth * 0.7;
+  const h = windowWidth >= 768 ? windowHeight * 0.7 : windowHeight * 0.7;
+  const w = windowWidth >= 768 ? windowWidth * 0.6 : windowWidth * 0.8;
   return (
     <ScrollableDropDownContainer
       style={{ color: "white", height: `${h}px`, width: `${w}px` }}

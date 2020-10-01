@@ -6,6 +6,9 @@ const ContentContainer = styled.div`
   margin-left: 1rem;
   margin-right: 1rem;
   overflow-wrap: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export default ContentContainer;
