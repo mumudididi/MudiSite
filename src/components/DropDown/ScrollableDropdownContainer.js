@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const TitleContainer = styled.div`
   height: 5%;
-  min-height: 30px;
+  min-height: 1.1rem;
   width: 100%;
   border-bottom: 1px white solid;
   display: inline-flex;
@@ -15,8 +15,8 @@ const TitleContainer = styled.div`
 
 const TitleButton = styled.button`
   border: none;
-  height: 1rem;
-  width: 1rem;
+  height: 0.9rem;
+  width: 0.5rem;
   border-radius: 50%;
   position: absolute;
   cursor: pointer;
@@ -46,7 +46,7 @@ const ScrollContentContainer = styled.div`
   }
 
   &::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
     border-radius: 1rem;
     border: 1px red dashed;
     background-color: #e0728f;
@@ -60,7 +60,7 @@ const ScrollContentContainer = styled.div`
     border-radius: 2rem;
   }
   &::-moz-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
     border-radius: 1rem;
     border: 1px red dashed;
     background-color: #e0728f;
@@ -71,7 +71,7 @@ const DropdownContainer = styled.div.attrs((props) => ({
   style: props.style,
 }))`
   position: relative;
-  border: 4px #e094a8 solid;
+  border: 0.2rem #e094a8 solid;
   background-color: rgba(0, 0, 30, 0.9);
   border-radius: 1rem;
   display: flex;

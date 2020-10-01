@@ -22,7 +22,7 @@ const Home = (props) => {
           (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧{" "}
           <span
             style={{
-              fontSize: "3rem",
+              fontSize: "2.5rem",
               color: "#ffd500",
               textShadow: "1px 1px 4px #ccc",
               fontWeight: "bold",
@@ -33,7 +33,7 @@ const Home = (props) => {
           ✧ﾟ･: *ヽ(◕ヮ◕ヽ)
         </p>
       </HeadLine>
-      <ContentContainer style={{ fontSize: "1.8rem" }}>
+      <ContentContainer style={{ fontSize: "1.6rem" }}>
         Hello visitors! You just hit{" "}
         <span style={{ color: "#ffd500" }}>Mudi </span>
         's website ~ヾ(＾∇＾). <br />

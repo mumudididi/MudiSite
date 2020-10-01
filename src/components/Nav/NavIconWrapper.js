@@ -10,8 +10,8 @@ const Wrapper = styled.div.attrs((props) => ({
   },
 }))`
   position: absolute;
-  height: 85px;
-  width: 100px;
+  height: 3rem;
+  width: 5rem;
   background: none;
   z-index: 99;
   cursor: grab;

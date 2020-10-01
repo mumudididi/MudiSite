@@ -11,6 +11,17 @@ import Home from "./components/Pages/Home";
 import About from "./components/Pages/About";
 
 const GlobalStyle = createGlobalStyle`
+html {
+font-size: 14px;
+
+@media (max-width: 768px) {
+  font-size: 12px;
+}
+
+@media (max-width: 500px) {
+  font-size: 10px;
+}
+}
   body {
     margin:0;
     padding:0;
@@ -28,6 +39,7 @@ const MainWrapper = styled.div`
   background-size: cover;
   width: 100vw;
   height: 100vh;
+  /* font-size: 50px; */
 `;
 
 const DropdownWrapper = styled.div.attrs((props) => ({
@@ -43,9 +55,9 @@ const CopyRight = styled.div`
   color: #adff2f;
   background: none;
   bottom: 2%;
-  left: 40%;
+  left: 30%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   white-space: nowrap;
 `;
 function App() {
@@ -56,25 +68,28 @@ function App() {
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
 
+  const rowInterval = windowWidth <= 768 ? windowWidth / 12 : 0;
+  const columnInterval = windowWidth <= 768 ? 0 : windowHeight / 9;
+
   const [DropdownProps, setDropdownProps] = useState({
-    pos: { left: 0.15 * windowWidth, top: (1 * windowHeight) / 9 },
+    pos: { left: 0.2 * windowWidth, top: (1.5 * windowHeight) / 9 },
     posOffSet: { diffX: 0, diffY: 0 },
   });
   const [HomeIconProps, setHomeIconProps] = useState({
-    pos: { left: 0 * windowWidth, top: (1 * windowHeight) / 9 },
+    pos: { left: 0 * rowInterval, top: 1 * columnInterval },
     posOffSet: { diffX: 0, diffY: 0 },
   });
 
   const [AboutIconProps, setAboutIconProps] = useState({
-    pos: { left: 0 * windowWidth, top: (3 * windowHeight) / 9 },
+    pos: { left: 2 * rowInterval, top: 3 * columnInterval },
     posOffSet: { diffX: 0, diffY: 0 },
   });
   const [ExperienceIconProps, setExperienceIconProps] = useState({
-    pos: { left: 0 * windowWidth, top: (5 * windowHeight) / 9 },
+    pos: { left: 4 * rowInterval, top: 5 * columnInterval },
     posOffSet: { diffX: 0, diffY: 0 },
   });
   const [ContactIconProps, setContactIconProps] = useState({
-    pos: { left: 0 * windowWidth, top: (7 * windowHeight) / 9 },
+    pos: { left: 6 * rowInterval, top: 7 * columnInterval },
     posOffSet: { diffX: 0, diffY: 0 },
   });
 

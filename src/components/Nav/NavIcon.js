@@ -66,9 +66,9 @@ const NavIcon = (props) => {
   const longPress = useLongPress(handleLongPress, 200);
 
   const folder = props.active ? (
-    <PinkFolderOpen size="60" title={sectionName} />
+    <PinkFolderOpen size="3rem" title={sectionName} />
   ) : (
-    <YellowFolder size="60" />
+    <YellowFolder size="3rem" />
   );
   return (
     <div>

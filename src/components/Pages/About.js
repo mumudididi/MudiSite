@@ -3,19 +3,21 @@ import ScrollableDropDownContainer from "../DropDown/ScrollableDropdownContainer
 import HeadLine from "../Pages/sharedComponent/HeadLine";
 import ContentContainer from "../Pages/sharedComponent/ContentContainer";
 const About = (props) => {
-  const h = window.innerHeight * 0.7;
-  const w = window.innerWidth * 0.6;
+  const windowHeight = window.innerHeight;
+  const windowWidth = window.innerWidth;
+  const h = windowWidth >= 768 ? windowHeight * 0.7 : windowHeight * 0.75;
+  const w = windowWidth >= 768 ? windowWidth * 0.6 : windowWidth * 0.7;
   return (
     <ScrollableDropDownContainer
       style={{ color: "white", height: `${h}px`, width: `${w}px` }}
       {...props}
     >
       <HeadLine>
-        <p style={{ fontSize: "2.5rem" }}>
-          A little bit more about{" "}
+        <p style={{ fontSize: "2.4rem" }}>
+          About{" "}
           <span
             style={{
-              fontSize: "2.7rem",
+              fontSize: "2.4rem",
               color: "#ffd500",
               textShadow: "2px 2px 2px #ccc",
               fontWeight: "bold",
@@ -26,7 +28,7 @@ const About = (props) => {
           (◍•ᴗ•◍)❤
         </p>
       </HeadLine>
-      <ContentContainer style={{ fontSize: "1.8rem" }}>
+      <ContentContainer style={{ fontSize: "1.6rem" }}>
         <p>
           I am a <span style={{ color: "#ffd500" }}>Math</span> major by
           profession, and a{" "}
@@ -80,7 +82,7 @@ const About = (props) => {
             {" "}
             ╰༼⇀︿⇀༽つ-]═──
           </span>{" "}
-          <span style={{ color: "tomato", textShadow: "2px 2px 2px coral" }}>
+          <span style={{ color: "tomato", textShadow: "1px 1px 1px coral" }}>
             {" "}
             bread and butter{" "}
           </span>
