@@ -36,13 +36,15 @@ const Home = (props) => {
         </p>
       </HeadLine>
       <ContentContainer style={{ fontSize: "1.6rem" }}>
-        Hello visitors! You just hit{" "}
-        <span style={{ color: "#ffd500" }}>Mudi </span>
-        's website ~ヾ(＾∇＾). <br />
-        I am a graduate student@UW and incoming SDE@Amazon. <br /> This site is
-        still under development -in the meantime, feel free to mess around with
-        everything here on the page! ~(˘▾˘~)
-        <br /> ཥ•̫͡•ཤ <br />{" "}
+        <p>
+          Hello visitors! You just hit{" "}
+          <span style={{ color: "#ffd500" }}>Mudi </span>
+          's website ~ヾ(＾∇＾). <br />
+          I am a graduate student@UW and incoming SDE@Amazon. <br /> This site
+          is still under development -in the meantime, feel free to mess around
+          with everything here on the page! ~(˘▾˘~)
+          <br /> ཥ•̫͡•ཤ <br />{" "}
+        </p>
         <p style={{ fontSize: "1rem" }}> Sat, Sep 26 2020 </p>
       </ContentContainer>
     </ScrollableDropdownContainer>

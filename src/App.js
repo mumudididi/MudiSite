@@ -14,6 +14,8 @@ import Experience from "./components/Pages/Experience";
 const GlobalStyle = createGlobalStyle`
 html {
 font-size: 14px;
+  width: 100vw;
+  height: 100vh;
 
 @media (max-width: 768px) {
   font-size: 12px;
@@ -29,26 +31,19 @@ font-size: 14px;
     box-sizing: border-box;
     overflow: hidden;
     font-family: 'Kalam', cursive;
-    /* position:fixed; */
   background-image: url(${BGImg});
   background-position: center;
-  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100%
   }
 `;
 
 const MainWrapper = styled.div`
-  /* background-image: url(${BGImg});
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; */
   width: 100vw;
   height: 100vh;
-  /* font-size: 50px; */
 `;
 
 const DropdownWrapper = styled.div.attrs((props) => ({
